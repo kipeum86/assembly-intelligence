@@ -12,7 +12,7 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
-    "deploy:migrate": "node -e \"const { require: tsxRequire } = require('tsx/cjs/api'); tsxRequire('./scripts/deploy-migrate.ts', __filename);\"",
+    "deploy:migrate": "tsx scripts/deploy-migrate.ts",
     "deploy:build": "pnpm deploy:migrate && pnpm build",
     "preflight:schema": "tsx scripts/preflight-schema.ts",
     "smoke:postdeploy": "tsx scripts/postdeploy-smoke.ts",
